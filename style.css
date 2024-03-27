@@ -1,0 +1,40 @@
+:root{
+    --navy:rgb(38, 51, 135); 
+    --gold:rgb(196, 176, 34);
+
+}
+.bg_navy{
+    background-color: var(--navy);
+    
+}
+.bg_pattern{
+    background-color: var(--navy);
+    background-image: url('./imgs/ginkgo1.jpg');
+    width: 100%;
+    object-fit: cover;
+     
+}
+.bg_flat{
+    background-image: url('./imgs/bg-ginkgo.png');
+}
+.overlay{
+    background-color: rgba(17, 23, 59, 0.616);
+    opacity: 95%;
+    z-index: 1;
+}
+.gradient{
+    z-index: 1;
+    background-color: #1d1e2cF2;
+    opacity: 95%;
+    background-image: linear-gradient(to right, rgba(76, 86, 107, 0.76) 15%, rgba(255, 255, 255, 0) 40%);
+}
+.bg_gold{
+    background-color: var(--gold);
+}
+#logo{
+    height: 60px;
+}
+.carousel_h{
+    height: 300px;
+    width:1200px;
+    }
