@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet">
+
+
+    <!-- ? BOOTSTRAP  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!--<script>const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))</script>
+    -->
+    </head>
+<body>
+    <header class="container-fluid row mx-auto py-2 bg_navy border-bottom ">
+        <nav class="navbar navbar-expand-md row mx-auto d-flex flex-wrap">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./imgs/duckwhite.png" alt="logo" style="height: 60px;">
+                </a>
+                <h1 class="text-light">TITOLO</h1>
+            </div>   
+            <!-- bottone sostitutivo della navbar-->
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="d-flex ">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                    <!-- navbar quando sito grande-->
+                <div id="navbar-default" class="navbar-collapse collapse justify-content-around">
+                    
+                        <ul class="nav text-center d-flex justify-content-around container-fluid align-items-end  pt-2">
+                            <li class="nav-item d-flex flex-grow glow"><a class="nav-link active text-light" href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house glow" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/><p class="mb-0 c-hover c-base">Home</p></a></li>
+                            <li class="nav-item d-flex"><a class="nav-link text-light" href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16"><path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5z"/><p class="mb-0 c-hover c-base">About</p></a></li>
+                            <li class="nav-item d-flex"><a class="nav-link text-light" href="#works"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16"><path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/><path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27"/></svg><p class="mb-0 c-hover c-base">Works</p></a></li>
+                            <li class="nav-item d-flex"><a class="nav-link text-light" href="#projects"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-terminal" viewBox="0 0 16 16"><path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/><path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/></svg><p class="mb-0 c-hover c-base">Projects</p></a></li>
+                            <li class="nav-item d-flex"><a class="nav-link text-light" href="#contacts"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></svg><p class="mb-0 c-hover c-base">Contacts</p></a></li>
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main >
+        <!-- ' //////////////////// HOME ' //////////////////// -->
+        <div class="d-flex flex-wrap rounded py-3 pt-3 mt-4 mb-5 mx-auto bg_cream rounded col-md-11 col-12 position-relative justify-content-evenly">
+             <!-- tiene immagine e foto -->
+                <div class=" flex-column align-content-center d-flex flex-wrap justify-content-center align-items-center p-3">
+                    <h3>TITOLO</h3>
+                    <p>descrizione</p>
+                </div>
+                <div class=" justify-content-center d-flex flex-wrap  align-items-center mb-5 p-3">
+                    <img src="./imgs/placeholder.jpeg" alt="stand out image" style="object-fit: cover; max-width: 24rem;">
+                </div>
+            
+            <!-- ! container-fluid sunziona, flex-grow-1 no-->
+            <div style="max-height: 24rem; " class="rounded-bottom bg_navy position-absolute bottom-0 col-12 m-auto"> <!-- content align bottom?-->
+                <p class="text-light text-center">Mi chiamo Alessia, sono un'aspirante full stack developer bla bla bla</p>
+            </div>
+        </div>
+        <!-- 
+        <div class="container mt-4 d-flex flex-wrap justify-content-center">  sezione effettiva 
+            <div class="col">
+                <div class="p-2 mx-0 mb-2 d-flex justify-content-center">
+                    <div class="card  align-content-center  m-0" style="width:18rem; height:18rem;">
+                        <div class="card-body rounded bg_navy">
+                             * scritta * 
+                            <h3 class="">INSPIRATIONAL QUOTEEEE</h3>
+                        </div>
+                    </div>
+                </div>        
+                <div class=" p-2 mx-0 mb-2 d-flex justify-content-center">
+                    <div class="card " style="width:18rem; height:18rem;">
+                                 * immagine * 
+                        <img src="./imgs/placeholder.jpeg" alt="stand out image" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col p-2 mx-0 mb-4 d-flex align-content-center justify-content-center">    
+                <div class="card" style="width:18rem; height:18rem;">
+                         * testo di presentazione * 
+                    <p>ciao! Mi chiamo Alessia Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat vitae cumque, itaque odio quis, molestias blanditiis in iure perspiciatis voluptates quae repellendus debitis dolor tempore exercitationem consequatur quidem id aperiam?</p>
+                          banner attaccato a quello sopra  
+                </div>
+            </div>
+        </div>
+    -->
+        
+        <!-- ' //////////////////// ABOUT ' //////////////////// -->
+         
+        <div id="about" class="container-fluid col-md-11 col-12 position-relative d-flex justify-content-center m-auto mb-5 p-0" style="height: 48rem; min-height: 12rem; max-height: 24rem;">
+            <div class="bg_pattern d-flex flex-wrap rounded z-0 col-12 align-content-center " style="max-height: 24rem;">
+                <div class="border border-danger z-3 position-absolute top-0 start-50 translate-middle-x d-flex flex-wrap justify-content-center align-items-center p-3" style="max-width: 48rem; height: 24rem; min-width: 24rem;">
+                    <h3 class="top-0 text-light bg z-3 m-3" > ABOUT ME</h3>    
+                    <p class="top-0 text-light z-3">sono un'aspirante full stack developer, nel tempo libero mi cimento nelle telecomunicazioni Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officiis voluptas laboriosam! Odit, temporibus id magnam vel, blanditiis molestiae quasi unde minus, iusto sed dolores ut corrupti aperiam est eos?
+                    </p>
+                </div>
+                <div class="overlay rounded position-absolute top-0 col-12" style="height: 24rem;"></div>
+            </div>
+        </div>
+        <!-- div uguale a quello sopra con delle informazioni sulle mie competenze-->
+            
+            
+            <!-- immagine cliccabile da smartphone (e da pc) e freccette ">>>" preview di lavori -->
+        
+            <!-- ' //////////////////// WORKS '  mettere carosello-->
+
+            <!--
+        <div id="works" class="container-fluid col-md-11 col-12 position-relative d-flex  m-auto p-0 mb-5" style="height: 48rem; min-height: 12rem; max-height: 24rem; ">
+            <div class="bg_flat rounded z-0 col-12 align-content-center justify-content-between py-3 pt-3 mx-auto  justify-content-evenly" style="max-height: 24rem;">
+                <div class="border border-danger z-2 position-absolute top-0 start-50 d-flex flex-column justify-content-center align-items-center p-3" style="max-width: 48rem; height: 24rem; min-width: 24rem;">
+                    <h3 class=" row top-0 text-light bg z-2 m-3" > WORKS</h3>    
+                    <p class="row top-0 text-light z-2">Clicca sull bottone per vedere i miei lavori</p>
+                    
+                    <button class=" top-0 text-dark z-2 type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="WIP" data-bs-content="grazie per essere interessatə a questa sezione! Sfortunatamente non è ancora pronta ad essere visualizzata, arriverà presto! Iscriviti alla newsletter per rimanere aggiornatə su tutte le novità">CLICCA QUI</button>
+                        <button class=" top-0 text-dark z-2 type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"">CLICCA QUI</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">WORKS</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p> grazie per essere interessatə a questa sezione! Sfortunatamente non è ancora pronta ad essere visualizzata, arriverà presto! Iscriviti alla newsletter per rimanere aggiornatə su tutte le novità</p>
+                                        <p>Modal body text goes here.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="position-absolute z-2 top-50 start-0 translate-middle-y ms-5" src="./imgs/placeholder.jpeg" style=" max-width:24rem">
+                     <button class="position-absolute z-3 top-50 start-0 translate-middle-y ms-5"><img src="./imgs/placeholder.jpeg" style=" max-width:24rem"></button>
+                        <div class="overlay rounded position-absolute top-0 col-12" style="height: 24rem;"></div> 
+                    </div>
+                </div>
+            -->
+        <!-- div-->
+
+
+
+
+
+
+        <!-- ! prova div WORK -->
+        <div id="works" class="d-flex flex-wrap rounded py-3 pt-3 mt-4 mb-5 mx-auto bg_flat rounded col-md-11 col-12 position-relative justify-content-around" style="height: 48rem; min-height: 12rem; max-height: 24rem;">
+            <!-- tiene immagine e foto -->
+                <div class="d-flex flex-wrap align-items-center mb-2 p-3">
+                    <img src="./imgs/placeholder.jpeg" alt="stand out image" style="object-fit: cover; max-width: 24rem;">
+                </div>
+               <div class=" flex-column align-content-center d-flex flex-wrap justify-content-center align-items-center p-3 text-light">
+                   <h3>TITOLO</h3>
+                   <p>descrizione descrizione descrizione descrizione descrizione </p>
+               </div>
+        </div>
+<!--  
+        <div class="container-fluid col-md-11 col-12 d-flex justify-content-center m-auto p-0 mb-5" style="height: 48rem; min-height: 12rem; max-height: 24rem; ">
+            <div class="bg_pattern rounded z-0 col-12 align-content-center position-relative" style="max-height: 24rem;">
+                <div class="border border-danger z-3 position-absolute top-100 start-0   d-flex flex-wrap justify-content-around align-items-center p-3" style="max-width: 48rem; height: 24rem; min-width: 24rem;">
+                    <h3 class=" row text-light bg z-3 m-3" > PROVA</h3>    
+                    <p class="row  text-light z-3">blablablabla
+                    </p>
+                </div>
+                <div class="overlay rounded position-absolute top-0 col-12" style="height: 24rem;"></div>
+                <button class=" z-3 ms-5"><img src="./imgs/placeholder.jpeg" style=" max-width:24rem"></button>
+            </div>
+        </div>
+        
+        
+        -->
+        <!-- ° /////////////////  NUOVO CAROSELLO  //////////////////// ° -->
+        <div  class="my-5">
+            <div id="Carosello" class="carousel slide" data-bs-ride="carousel">
+                <div id="projects" class="carousel-inner ">
+                    <div class="carousel-item active bg_cream pt-3">
+                        
+                        <div class="d-flex flex-wrap rounded py-3 pt-3 mt-4 mb-5 mx-auto bg_flat rounded col-md-11 col-12 position-relative justify-content-around" style="height: 48rem; min-height: 12rem; max-height: 24rem;">
+                            <!-- tiene immagine e foto -->
+                                <div class="d-flex flex-wrap align-items-center mb-2 p-3">
+                                    <img class="carousel-sp" src="./imgs/placeholder.jpeg" alt="stand out image" style="object-fit: cover;">
+                                </div>
+                               <div class=" flex-column align-content-center d-flex flex-wrap justify-content-center align-items-center p-3 text-light">
+                                   <h3>TITOLO 1</h3>
+                                   <p>descrizione descrizione descrizione descrizione descrizione </p>
+                               </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item bg_cream pt-3">
+                        
+                        <div class="d-flex flex-wrap rounded py-3 pt-3 mt-4 mb-5 mx-auto bg_flat rounded col-md-11 col-12 position-relative justify-content-around" style="height: 48rem; min-height: 12rem; max-height: 24rem;">
+                            <!-- tiene immagine e foto -->
+                                <div class="d-flex flex-wrap align-items-center mb-2 p-3">
+                                    <img  src="./imgs/placeholder.jpeg" sizes="(max-width:768px)20rem" alt="stand out image" style="object-fit: cover; max-width:24rem;">
+                                </div>
+                               <div class=" flex-column align-content-center d-flex flex-wrap justify-content-center align-items-center p-3 text-light">
+                                   <h3>TITOLO 2</h3>
+                                   <p>descrizione descrizione descrizione descrizione descrizione </p>
+                               </div>
+                        </div>
+
+                    </div>
+                    <div class="carousel-item bg_cream pt-3">
+                        
+                        <div class="d-flex flex-wrap rounded py-3 pt-3 mt-4 mb-5 mx-auto bg_flat rounded col-md-11 col-12 position-relative justify-content-around" style="height: 48rem; min-height: 12rem; max-height: 24rem;">
+                            <!-- tiene immagine e foto -->
+                                <div class="d-flex flex-wrap align-items-center mb-2 p-3">
+                                    <img class="carousel-sp" src="./imgs/placeholder.jpeg" alt="stand out image" style="object-fit: cover; ">
+                                </div>
+                               <div class=" flex-column align-content-center d-flex flex-wrap justify-content-center align-items-center p-3 text-light">
+                                   <h3>TITOLO 3</h3>
+                                   <p>descrizione descrizione descrizione descrizione descrizione </p>
+                               </div>
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#Carosello" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#Carosello" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> 
+                </div>
+            </div> 
+        </div>
+     <!--
+         <div  class="mb-5">    
+              div uguale a quello sopra con preview lavori
+              carosello di lavori? 
+             <div id="carouselExample" class="carousel slide " data-bs-ride="carousel">  data bs ride è per farlo andare da solo
+                <div  class="carousel-inner">
+                    <div class="carousel-item active bg_gold">
+                          <div id="projects"></div>
+                          <div class="d-flex flex-wrap m-5 position-relative ">
+                              <div class=" d-flex flex-row justify-content-around " style="width: 100%;">
+                                  <div class="col-5">
+                                      <img src="./imgs/placeholder.jpeg" class="d-block w-100" alt="..." style=" height: 20rem;">
+                                    </div>
+                                    <div class=" d-flex justify-content-center ">
+                                        <div class="col-8 d-flex flex-column justify-content-center align-items-center m-auto p-3">
+                                            <div>
+                                                <h1 class="m-auto">TITOLO</h1>
+                                            </div>    
+                                            <div class="d-flex align-items-center">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequatur harum obcaecati corporis hic tempora provident reiciendis assumenda dolores dolore, voluptatem blanditiis et quo, odit, excepturi labore suscipit. Corporis, doloremque..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="carousel-item bg_gold">
+                            <div class="d-flex flex-wrap m-5 position-relative ">
+                                <div class=" d-flex flex-row justify-content-around " style="width: 100%;">
+                                    <div class="col-5">
+                                        <img src="./imgs/placeholder.jpeg" class="d-block w-100" alt="..." style=" height: 20rem;">
+                                    </div>
+                                    <div class=" d-flex justify-content-center ">
+                                        <div class="col-8 d-flex flex-column justify-content-center align-items-center m-auto p-3">
+                                            <div>
+                                                <h1 class="m-auto">TITOLO 2</h1>
+                                            </div>    
+                                            <div class="d-flex align-items-center">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequatur harum obcaecati corporis hic tempora provident reiciendis assumenda dolores dolore, voluptatem blanditiis et quo, odit, excepturi labore suscipit. Corporis, doloremque..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="carousel-item bg_gold">
+                            <div class="d-flex flex-wrap m-5 position-relative ">
+                                <div class=" d-flex flex-row justify-content-around " style="width: 100%;">
+                                    <div class="col-5">
+                                        <img src="./imgs/placeholder.jpeg" class="d-block w-100" alt="..." style=" height: 20rem;">
+                                    </div>
+                                    <div class=" d-flex justify-content-center ">
+                                        <div class="col-8 d-flex flex-column justify-content-center align-items-center m-auto p-3">
+                                            <div>
+                                                <h1 class="m-auto">TITOLO 3</h1>
+                                            </div>    
+                                            <div class="d-flex align-items-center">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequatur harum obcaecati corporis hic tempora provident reiciendis assumenda dolores dolore, voluptatem blanditiis et quo, odit, excepturi labore suscipit. Corporis, doloremque..</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                        
+                        
+                      <div class="carousel-item position-relative bg_gold">
+                        <div>
+                            <div class="d-flex justify-content-center">
+                                <div>
+                                    
+                                    <img src="./imgs/placeholder.jpeg" class="d-block w-100 carousel_h z-1 position-relative t-0" alt="...">
+                                    <h3 class="z-2 position-absolute t-50 start-50">TITOLO</h3>
+                                    <h1 class="z-2 position-absolute ">questo è un carosello</h1>
+                                </div>
+                            </div>
+                      </div>    
+     
+                            
+                      </div>
+                      <div class="carousel-item bg_gold">
+                          <img src="./imgs/placeholder.jpeg" class="d-block w-100 carousel_h" alt="...">
+                        </div>
+                      <div class="carousel-item justify-content-left m-5">
+                        <div>
+                            <h1>ciao</h1>
+                            <p>gnam questo è una voce del carosello</p>
+                        </div>
+                    </div> 
+                        </div> 
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button> 
+                </div>
+            </div>  
+        </div>
+    -->
+        <!-- '  PROJECTS '  anche qui carosello -->
+        <!-- * carosello carte --> 
+        <!--  
+        <h3>PROJECTS</h3>    
+            ° gioco fantasmino, nanogram
+            <p>wip e attività iniziate o parziali</p>
+
+            <div class="row">
+                <div class="col">
+                    <h2>PROJECTS</h2>
+                </div>
+            </div>
+            <div class="position-relative">
+                ° card 
+                <div>
+                    <div class="card mb-4">
+                        <a href="url"><img src="./imgs/ginkgoPLACEHOLDER.png" alt="placeholder" class="card-img-top" style="height: 100px; width: 100px;"></a>
+                    ° card body
+                        <div class="card-body">
+                            <h4 class="mb-2">
+                                <a href="url">Card 1</a>
+                            </h4>
+                        </div>
+                    ° card footer 
+                     <div class="card-footer">
+                        <div class="row align-items-center g-0">
+                            <div class="col ms-2">
+                                <span>descrizione</span>
+                            </div>
+                        </div>
+                     </div>  
+                        
+                    </div>
+                    <div class="card mb-4">
+                        <a href="url"><img src="./imgs/ginkgoPLACEHOLDER.png" alt="placeholder" class="card-img-top" style="height: 100px; width: 100px;"></a>
+                    ° card body
+                        <div class="card-body">
+                            <h4 class="mb-2">
+                                <a href="url">Card 1</a>
+                            </h4>
+                        </div>
+                    ° card footer 
+                     <div class="card-footer">
+                        <div class="row align-items-center g-0">
+                            <div class="col ms-2">
+                                <span>descrizione</span>
+                            </div>
+                        </div>
+                     </div>  
+                        
+                    </div>
+                </div>
+            </div> --> 
+            
+
+    </main>
+    <footer id="contacts" class="collapse container-fluid bg_navy row d-flex justify-content-center align-items-center"> 
+        <!-- '  CONTACTS '  -->
+        <h6 class="justify-content-center text-light  mt-3">contattami:</h6>
+        <div class="justify-content-around">
+             
+            <ul class="d-flex js-evenly align-items-center text-light text-center container-fluid" style="list-style: none;">
+                <li class="nav-item d-flex"> <a href="https://github.com/arshenAll" target="_blank">   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                </svg><p>github</p></a></li>
+                <li class="nav-item d-flex">  <a href="https://www.linkedin.com/in/alessia-gottardo-096b492b7">  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg><p>linkedin</p></a></li>
+                <li class="nav-item d-flex"><a href="https://github.com/arshenAll"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg><p>github</p></a></li>
+                <li class="nav-item d-flex"> <a>   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                </svg><p>form</p></a></li>
+            </ul>
+            <!-- 
+            <ul class="d-flex  js-evenly align-items-center text-light" style="list-style: none;">
+                <li class="c-hover c-base"><a href="mailto:alessia.gottardo01@gmail.com">mail</a></li>
+                <li class="c-hover c-base"><a href="https://www.linkedin.com/in/alessia-gottardo-096b492b7" target="_blank">linkedin</a></li>
+                <li class="c-hover c-base"><a href="https://github.com/arshenAll" target="_blank">github</a></li>
+                <li class="c-hover c-base">compila il form</li>
+            </ul>
+        -->
+
+        </div>
+        <fomr><!-- inserire form di contatto largo--></fomr>
+
+                    
+    
+        
+    </div>
+
+
+
+    </footer>
+    
+</body>
+<!-- ° bottone modale ° -->
+<!-- Button trigger modal --
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+<!-- ° modale tipo ° -->
+<!--  modal --
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">WORKS</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p> grazie per essere interessatə a questa sezione! Sfortunatamente non è ancora pronta ad essere visualizzata, arriverà presto! Iscriviti alla newsletter per rimanere aggiornatə su tutte le novità</p>
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   end modal -->
+
+
+
+</html>
+
+
+  
+            
+
