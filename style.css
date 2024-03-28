@@ -1,11 +1,27 @@
 :root{
-    --navy:rgb(38, 51, 135); 
+    --navy:rgb(30, 37, 63);  
     --gold:rgb(196, 176, 34);
-
+    --cream: #FFBF66;
+    --r-gold: #C48122;
+    --blue1: rgb(38, 51, 135);
+    --blue: rgba(31, 34, 53, 0.527); 
+}
+.b-color{
+    background-color: rgba(31, 34, 53, 0.603);
+    color: white;
+}
+.t-color{
+    color: var(--r-gold);
+}
+.bg_blue{
+    background-color: var(--blue1);
 }
 .bg_navy{
     background-color: var(--navy);
     
+}
+.bg_blue1{
+    background-color: var(--blue);
 }
 .bg_pattern{
     background-color: var(--navy);
@@ -15,7 +31,10 @@
      
 }
 .bg_flat{
+    background-color: var(--navy);
     background-image: url('./imgs/bg-ginkgo.png');
+    width: 100%;
+    object-fit: cover;
 }
 .overlay{
     background-color: rgba(17, 23, 59, 0.616);
@@ -31,10 +50,152 @@
 .bg_gold{
     background-color: var(--gold);
 }
+.bg_cream{
+    background-color: var(--cream);
+}
 #logo{
     height: 60px;
 }
+/*               
+            !IMPORTANT FIX TO DO!
 .carousel_h{
     height: 300px;
     width:1200px;
     }
+    @media (min-width:768px){
+        .carousel-sp {
+            max-width: 24rem;
+        }
+    } 
+    @media (max-width:767px) {
+        .carousel-sp {
+            max-width: 20rem;
+        }
+    }
+    @media (max-width: 767px){
+        .mod-scroll{
+            modal-dialog-scrollable;
+        }
+    }
+*/
+.carousel-sp{
+    max-width: 20rem;
+}
+.js-evenly{
+    justify-content: space-evenly;
+}
+/* prima di*/
+/*
+.glow:hover{
+    transform: scale(1);
+    transition: 1s;
+    
+}
+.glow::before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00ff0a;
+  transform: scale(0.1);
+  box-shadow: 0 0 10px #00ff0a,
+              0 0 20px #00ff0a,
+              0 0 40px #00ff0a,
+              0 0 60px #00ff0a,
+              0 0 80px #00ff0a,
+              0 0 100px #00ff0a;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 2s;
+}*/
+/*svg:hover{
+    fill: red; 
+    transition: 1s;
+    -webkit-box-shadow:0px 0px 84px 0px rgba(255,255,255,0.56);
+-moz-box-shadow: 0px 0px 84px 0px rgba(255,255,255,0.56);
+box-shadow: 0px 0px 84px 0px rgba(255,255,255,0.56);
+}*/
+svg{
+    color:rgb(77, 101, 235);
+}
+svg:hover{
+    fill: white;
+}
+.c-hover:hover{
+    color: white;
+} 
+.c-base{
+    color:rgb(77, 101, 235);
+}
+button{
+    border:none;
+}
+.mont-bold{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.mont-light{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200; /*100-600*/
+    font-style: normal;   
+}
+.mont{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; /*100-600*/
+    font-style: normal;   
+}
+.bar-con-bold{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;   
+}
+.bar-semi-bold{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal; 
+}
+.title-main{
+    font-size: 4rem;
+}
+.title-sub{
+    font-size: 2rem;;
+}
+.title-standard{
+    font-size: 1.5rem;
+}
+.bar-con{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.bar-semi{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.bar{
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .bar-bold{
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300; /*100-600*/
+    font-style: normal; 
+}
+.rounded-16{
+    border-radius: 16px;
+}
